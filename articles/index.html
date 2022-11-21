@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Judul Halaman -->
+    <title>Ekipa - Baca artikel terbaru</title>
+    <link rel="stylesheet" href="/scss/custom.css" />
+    <link rel="stylesheet" href="/scss/main.css" />
+  </head>
+  <body class="bg-custom-bg">
+    <!-- Membuat navbar bootstrap dengan logo website menu dan icon profile -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container py-2">
+        <a class="navbar-brand text-primary me-5" href="/index.html">
+          <h4 class="m-0">Ekipa</h4>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 g-4">
+            <li class="nav-item me-4">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link" href="/products/index.html">Produk</a>
+            </li>
+            <li class="nav-item me-4">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/articles/index.html"
+                >Artikel</a
+              >
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link" href="/contact.html">Kontak</a>
+            </li>
+          </ul>
+          <div class="dropdown">
+            <a
+              href="javascript:void(0)"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              class="d-flex align-items-center gap-3 profile dropdown-toggle"
+            >
+              <img
+                src="https://randomuser.me/api/portraits/men/14.jpg"
+                alt="My Profile"
+                class="rounded-3"
+                width="35"
+                height="35"
+              />
+              <p class="text-black m-0" id="profile-name">Misrudin</p>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <button class="dropdown-item" type="button">Menu 1</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Menu 1</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Menu 1</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Menu 1</button>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <button
+                  onclick="logout()"
+                  class="dropdown-item text-danger"
+                  type="button"
+                >
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pb-5">
+      <!-- Menampilkan List Artikel -->
+      <div class="container mt-4">
+        <div class="row g-3">
+          <div class="col-md-8">
+            <!-- Menampilkan List Artikel yang di generate di javascript main.js -->
+            <div class="bg-white p-3" id="articles-all"></div>
+          </div>
+          <div class="col-md-4">
+            <!-- Menampilkan list kategori populer -->
+            <div class="bg-white p-3 rounded-1 mb-3">
+              <h5 class="mb-3">Popular Category</h5>
+              <ul class="p-0 m-0">
+                <li class="pb-1 d-flex"><a href="#">Berita Terkini</a></li>
+                <li class="py-1 d-flex"><a href="#">Makanan</a></li>
+                <li class="py-1 d-flex"><a href="#">Game</a></li>
+                <li class="py-1 d-flex"><a href="#">Technology</a></li>
+                <li class="pt-1 d-flex mb-0"><a href="#">Math</a></li>
+              </ul>
+            </div>
+            <!-- Menampilkan Artikel terbaru yang di generate oleh javascript main.js -->
+            <div
+              class="bg-white p-3 rounded-1 sticky-top"
+              style="top: 80px; z-index: 100"
+            >
+              <h5 class="mb-3">New Article</h5>
+              <div id="new-article"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Menampilkan Footer -->
+    <footer>
+      <div class="container">
+        <p class="text-center text-black-50" id="copyright"></p>
+      </div>
+    </footer>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
