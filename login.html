@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/scss/custom.css" />
+    <link rel="stylesheet" href="/scss/main.css" />
+  </head>
+  <body class="bg-custom-bg">
+    <section
+      class="vw-100 vh-100 d-flex align-items-center justify-content-center"
+    >
+      <div class="rounded-3 bg-white px-4 py-5 login_form shadow-sm">
+        <h5 class="fs-3 fw-bolder">Welcome to Ekipa</h5>
+        <p class="fs-6 fw-light text-black-50">
+          Silakan login untuk mulai belanja.
+        </p>
+
+        <form class="form-floating mt-5" id="form-login">
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="name@example.com"
+            />
+            <label for="floatingInput">Email</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+              name="password"
+            />
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div
+            id="alert"
+            class="alert alert-danger mt-3 d-none"
+            role="alert"
+          ></div>
+          <button class="btn btn-primary mt-4 w-100 btn-lg rounded-5">
+            LOGIN
+          </button>
+          <p class="text-center mt-5">
+            Belum punya akun?
+            <a href="/register.html" class="text-primary">Daftar</a>
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
