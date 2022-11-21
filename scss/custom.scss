@@ -1,0 +1,37 @@
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+
+$primary: #9A1663;
+$danger: #E0144C;
+$accet: #FF5858;
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger
+);
+
+$custom-colors: (
+  "custom-bg": #f7f9fc,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "../bootstrap/scss/bootstrap";
+
+// 5. Include remainder of required parts
+@import "../bootstrap/scss/maps";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../bootstrap/scss/utilities";
+@import "../bootstrap/scss/reboot";
+@import "../bootstrap/scss/type";
+@import "../bootstrap/scss/images";
+@import "../bootstrap/scss/containers";
+@import "../bootstrap/scss/grid";
+@import "../bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../bootstrap/scss/utilities/api";
